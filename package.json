@@ -1,0 +1,20 @@
+{
+    "name": "users-api",
+    "version": "2023",
+    "description": "",
+    "main": "users-controller.mjs",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon users-controller.mjs"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "dotenv": "^16.0.3",
+      "express": "^4.18.2",
+      "express-async-handler": "^1.2.0",
+      "mongoose": "^6.9.2",
+      "nodemon": "^2.0.20"
+    }
+  }
+  
