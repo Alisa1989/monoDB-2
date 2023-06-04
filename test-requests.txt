@@ -1,0 +1,26 @@
+// adding data
+// without phoneNumber
+http://localhost:3000/create?name=Tobias&age=32&email=tobtheman@gmail.com
+http://localhost:3000/create?name=Lucille&age=74&email=lucyinthesky@gmail.com
+http://localhost:3000/create?name=Michael&age=35&email=mikey@gmail.com
+http://localhost:3000/create?name=Lindsay&age=35&email=lindserina@gmail.com
+http://localhost:3000/create?name=Oscar&age=78&email=oscar55@gmail.com
+
+// with phoneNumber
+http://localhost:3000/create?name=Maeby&age=16&email=maebynot@gmail.com&phoneNumber=123456789
+http://localhost:3000/create?name=George&age=78&email=george55@gmail.com&phoneNumber=234567891
+http://localhost:3000/create?name=GeorgeMichael&age=16&email=thebest@gmail.com&phoneNumber=345678912
+http://localhost:3000/create?name=Barry&age=64&email=barryistheanswer@gmail.com&phoneNumber=456789123
+http://localhost:3000/create?name=Jeremy&age=32&email=whoisthat@gmail.com&phoneNumber=567891234
+
+//adding this data should not work
+http://localhost:3000/create?name=Timothy
+
+//Retrieve
+http://localhost:3000/retrieve?
+http://localhost:3000/retrieve?name=Oscar
+http://localhost:3000/retrieve?age=35
+http://localhost:3000/retrieve?email=whoisthat@gmail.com
+http://localhost:3000/retrieve?phoneNumber=123456789
+
+
