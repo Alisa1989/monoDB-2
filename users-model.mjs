@@ -34,18 +34,35 @@ const createUser = async (name, age, email, phoneNumber) => {
 }
 
 //  RETRIEVE models-----------------------
-//  by Filter
-const findUsers = async (filter) => {
-    const query = User.find(filter)
-    return query.exec()
-}
 //  by ID
 const findById = async (_id) => {
     const query = User.findById(_id);
     return query.exec();
 }
+//  by Filter
+const findUsers = async (filter) => {
+    const query = User.find(filter)
+        .select('name age email phoneNumber _id')   
+    return query.exec()
+}
 
 //  UPDATE models------------------------
-//  DELETE models------------------------
+const updateUser = async (filter, update) => {
+    const result = await User.updateOne(filter, update);
+    return result.modifiedCount
+}
 
-export {createUser, findUsers, findById}
+//  DELETE models------------------------
+//  by ID
+const deleteById = async (_id) => {
+    const result = await User.deleteOne({_id: _id});
+    return result.deletedCount;
+}
+
+//  by Filter
+const deleteByProperty = async (filter) => {
+    const result = await User.deleteMany(filter);
+    return result.deletedCount;
+}
+
+export {createUser, findUsers, findById, updateUser, deleteById, deleteByProperty}
